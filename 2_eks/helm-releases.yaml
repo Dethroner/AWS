@@ -1,0 +1,19 @@
+releases:
+  - id: prometheus
+    enabled: true
+    chart: kube-prometheus-stack
+    repository: https://prometheus-community.github.io/helm-charts
+    chart_version: 45.7.1
+    namespace: monitoring
+  - id: aws-load-balancer-controller
+    enabled: true
+    chart: aws-load-balancer-controller
+    repository: https://aws.github.io/eks-charts
+    chart_version: 1.4.2
+    namespace: aws-load-balancer-controller
+  - id: ingress-nginx
+    enabled: true
+    chart: ingress-nginx
+    repository: https://kubernetes.github.io/ingress-nginx
+    chart_version: 4.3.0
+    namespace: ingress-nginx
